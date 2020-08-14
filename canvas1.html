@@ -2,9 +2,20 @@
 <html>
 <head>
 	<title>Canvas 1</title>
+	<!--
 	<style type="text/css">
-		
+		.content{
+			width: 100%;
+			min-height: 100%;
+			background-color: green;
+			margin: auto;
+		}
+		canvas{
+			background-color: white;
+			margin: auto;
+		}
 	</style>
+	-->
 </head>
 <body>
 	<div class="content">
@@ -12,12 +23,24 @@
 	</div>
 	<script type="text/javascript">
 		var canvas = document.getElementById('canvas');
+
 		if(canvas.getContext){
 			var ctx = canvas.getContext('2d');
-			ctx.fillStyle = 'rgb(200,0,0)';
-			ctx.fillRect(10,10,50,50);
-			ctx.fillStyle = 'rgba(0,0,200,0.5)';
-			ctx.fillRect(30,30,50,50);		}
+
+			//fillRectTarea
+			//ctx.fillStyle = 'rgb(200,0,0)';
+			//ctx.fillRect(10,10,50,50);
+
+			//ctx.fillStyle = 'rgba(0,0,200,0.5)';
+			//ctx.fillRect(30,30,50,50);	
+
+			//moveToTarea
+			ctx.moveTo(10,10);
+			ctx.lineTo(100,100);
+			ctx.stroke();
+		}else{
+			alert('No se puede cargar canvas');
+		}
 	</script>
 </body>
 </html>
