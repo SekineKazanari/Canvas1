@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas 1</title>
+	<!--
+	<style type="text/css">
+		.content{
+			width: 100%;
+			min-height: 100%;
+			background-color: green;
+			margin: auto;
+		}
+		canvas{
+			background-color: white;
+			margin: auto;
+		}
+	</style>
+	-->
+</head>
+<body>
+	<div class="content">
+		<canvas id="canvas" width="400" height="600"></canvas>
+		</canvas><img id="miaumiau" style="visibility: hidden;" src="images/20190813_214520.jpg">
+	</div>
+	<script type="text/javascript">
+		var canvas = document.getElementById('canvas');
+
+		if(canvas.getContext){
+			var ctx = canvas.getContext('2d');
+
+			//Cabeza
+			ctx.beginPath();
+			ctx.arc(100, 95, 52, 0, 2 * Math.PI);
+			ctx.stroke();
+			ctx.fillStyle = "#331808";
+			ctx.fill();
+
+			ctx.fillStyle = '#331808';
+			ctx.fillRect(48,90,105,200);
+
+			ctx.beginPath();
+			ctx.arc(100, 100, 50, 0, 2 * Math.PI);
+			ctx.fillStyle = "#FFCAA7";
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.arc(120, 91, 10, 0, 2 * Math.PI);
+			ctx.fillStyle = "black";
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.arc(100, 100, 51, 4, 2 * Math.PI);
+			ctx.fillStyle = "#331808";
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.arc(80, 90, 10, 0, 2 * Math.PI);
+			ctx.fillStyle = "black";
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.arc(100, 120, 10, 7, 1 * Math.PI);
+			ctx.fillStyle = "black";
+			ctx.stroke();
+
+			ctx.fillStyle = '#FFCAA7';
+			ctx.fillRect(88,145,25,15);
+
+			
+			//Abajo
+			ctx.fillStyle = '#C6C6C6';
+			ctx.fillRect(105,420,50,23);
+
+			ctx.fillStyle = '#C6C6C6';
+			ctx.fillRect(118,425,50,18);
+
+			ctx.fillStyle = '#C6C6C6';
+			ctx.fillRect(40,420,50,23);
+
+			ctx.fillStyle = '#C6C6C6';
+			ctx.fillRect(27,425,50,18);
+
+			ctx.fillStyle = '#373737';
+			ctx.fillRect(50, 270, 95, 50);
+
+			ctx.fillStyle = '#373737';
+			ctx.fillRect(50, 320, 40, 100);
+
+			ctx.fillStyle = '#373737';
+			ctx.fillRect(105, 320, 40, 100);
+
+
+
+			//cuerpo
+			ctx.fillStyle = '#082F3E';
+			ctx.fillRect(50,159,95,120);
+
+			ctx.fillStyle = '#FFCAA7';
+			ctx.fillRect(37,198,25,80);
+
+			ctx.fillStyle = '#082F3E';
+			ctx.fillRect(35,174,30,25);
+
+			ctx.beginPath();
+			ctx.arc(49, 280, 12.5, 0, 2 * Math.PI);
+			ctx.fillStyle = "#FFCAA7";
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.arc(100.5, 158, 12.5, 0, 2 * Math.PI);
+			ctx.fillStyle = "#FFCAA7";
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.arc(50, 174, 15, 0, 2 * Math.PI);
+			ctx.fillStyle = "#082F3E";
+			ctx.fill();
+
+			ctx.fillStyle = '#FFCAA7';
+			ctx.fillRect(138,199,25,80);
+
+			ctx.beginPath();
+			ctx.arc(151, 280, 12.5, 0, 2 * Math.PI);
+			ctx.fillStyle = "#FFCAA7";
+			ctx.fill();
+
+			ctx.fillStyle = '#082F3E';
+			ctx.fillRect(134,170,30,30);
+
+			ctx.beginPath();
+			ctx.arc(149, 174, 15, 0, 2 * Math.PI);
+			ctx.fillStyle = "#082F3E";
+			ctx.fill();
+
+			window.onload = function() {
+				var img = document.getElementById("miaumiau");
+			ctx.drawImage(img, 0, 0, 300, 380);
+			}
+		}else{
+			alert('No se puede cargar canvas');
+		}
+	</script>
+</body>
+</html>
