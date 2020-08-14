@@ -19,7 +19,7 @@
 </head>
 <body>
 	<div class="content">
-		<canvas id="canvas" width="400" height="400"></canvas>		
+		<canvas id="canvas" width="400" height="400"></canvas><img id="miaumiau" style="visibility: hidden;" src="images/20190813_214520.jpg">
 	</div>
 	<script type="text/javascript">
 		var canvas = document.getElementById('canvas');
@@ -60,17 +60,17 @@
 			//ctx.fillRect(50, 50, 150, 80);
 
 			//createRadialGradient
-			var grad = ctx.createRadialGradient(70, 50, 5, 90, 50, 100);
-			grad.addColorStop(0, "red");
-			grad.addColorStop(1, "white");
-			ctx.fillStyle = grad;
-			ctx.fillRect(10, 10, 150, 80);
+			//var grad = ctx.createRadialGradient(70, 50, 5, 90, 50, 100);
+			//grad.addColorStop(0, "red");
+			//grad.addColorStop(1, "white");
+			//ctx.fillStyle = grad;
+			//ctx.fillRect(10, 10, 150, 80);
 
-
-
-
-
-
+			//drawImage
+			window.onload = function() {
+				var img = document.getElementById("miaumiau");
+			ctx.drawImage(img, 0, 0, 300, 380);
+			}
 		}else{
 			alert('No se puede cargar canvas');
 		}
