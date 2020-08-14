@@ -20,7 +20,7 @@
 <body>
 	<div class="content">
 		<canvas id="canvas" width="400" height="600"></canvas>
-		</canvas><img id="miaumiau" style="visibility: hidden;" src="images/20190813_214520.jpg">
+	</canvas><img id="miaumiau" style="visibility: hidden;" src="images/erza.png">
 	</div>
 	<script type="text/javascript">
 		var canvas = document.getElementById('canvas');
@@ -68,6 +68,11 @@
 
 			
 			//Abajo
+			ctx.beginPath();
+			ctx.arc(151, 280, 12.5, 0, 2 * Math.PI);
+			ctx.fillStyle = "#FFCAA7";
+			ctx.fill();
+			
 			ctx.fillStyle = '#C6C6C6';
 			ctx.fillRect(105,420,50,23);
 
@@ -92,6 +97,12 @@
 
 
 			//cuerpo
+			ctx.fillStyle = '#FFCAA7';
+			ctx.fillRect(138,199,25,80);
+
+			
+
+
 			ctx.fillStyle = '#082F3E';
 			ctx.fillRect(50,159,95,120);
 
@@ -116,14 +127,7 @@
 			ctx.fillStyle = "#082F3E";
 			ctx.fill();
 
-			ctx.fillStyle = '#FFCAA7';
-			ctx.fillRect(138,199,25,80);
-
-			ctx.beginPath();
-			ctx.arc(151, 280, 12.5, 0, 2 * Math.PI);
-			ctx.fillStyle = "#FFCAA7";
-			ctx.fill();
-
+			
 			ctx.fillStyle = '#082F3E';
 			ctx.fillRect(134,170,30,30);
 
@@ -134,7 +138,7 @@
 
 			window.onload = function() {
 				var img = document.getElementById("miaumiau");
-			ctx.drawImage(img, 0, 0, 300, 380);
+			ctx.drawImage(img, 75, 165, 50, 80);
 			}
 		}else{
 			alert('No se puede cargar canvas');
