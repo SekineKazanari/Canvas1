@@ -49,8 +49,20 @@
 			//ctx.fillText("Hello World", 100, 100);
 
 			//fontStroke
-			ctx.font = "40px Arial";
-			ctx.strokeText("Hello World", 100, 100);
+			//ctx.font = "40px Arial";
+			//ctx.strokeText("Hello World", 100, 100);
+
+			//createLinearGradient - fill whit gradient
+			var grad = ctx.createLinearGradient(0, 0, 200, 0);
+
+			grad.addColorStop(0, "red");
+			grad.addColorStop(1, "white");
+
+			ctx.fillStyle = grad;
+			ctx.fillRect(50, 50, 150, 80);
+
+
+
 
 
 
